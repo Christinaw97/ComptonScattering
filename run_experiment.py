@@ -55,9 +55,8 @@ if __name__ == '__main__':
     config = configparser.ConfigParser()
     config.read('data/config.ini')
     source_energy = float(config['source']['energy'])
-
-    print('Target energy is '+ str(target_energy(source_energy, 20)) + 'deg')
-    print('Tag energy is '+ str(target_energy(source_energy, 20)) + 'deg')
+    print('Target energy is '+ str(target_energy(source_energy, target_deg)) + 'keV')
+    print('Tag energy is '+ str(tag_energy(source_energy, target_deg)) + 'keV')
 
     # stage configuration
     linear_config = config['linear_30']
